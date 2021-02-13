@@ -1,2 +1,2 @@
 # MLtoHeroku
- MAchine Learning Model Deployment to Heroku
+ Machine Learning Model Deployment to Heroku
