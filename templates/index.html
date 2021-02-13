@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Test</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <script type=text/javascript src="{{url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body background="{{url_for('static', filename='bg.jpg')}}">
+
+<div class="wrapper">
+  <form name="myForm" action="/predict" onsubmit="return validateForm()" method="POST">
+  <div class="title">
+    <h1>Diabetes Test (Prediction) </h1>
+  </div>
+  <div class="contact-form">
+    <div class="input-fields">
+
+      <input type="number" class="input" name="Pregnancies" id="Pregnancies" step="any" placeholder="Pregnancies" required>
+      <input type="number" class="input" name="Glucose" id="Glucose" step="any" placeholder="Glucose">
+      <input type="number" class="input" name="BloodPressure" id="BloodPressure" step="any" placeholder="Blood Pressure" required>
+      <input type="number" class="input" name="SkinThickness" id="SkinThickness" step="any" placeholder="Skin Thickness" required>
+    </div>
+    <div class="input-fields">
+      <input type="number" class="input" name="Insulin" id="Insulin" step="any" placeholder="Insulin" required>
+      <input type="number" class="input" name="BMI" id="BMI" step="any" placeholder="BMI" required>
+      <input type="number" class="input" name="DiabetesPedigreeFunction" id="Diabetes Pedigree Function" step="any" placeholder="DiabetesPedigreeFunction" required>
+      <input type="number" class="input" name="Age" id="Age" step="any" placeholder="Age" required>
+
+    </div>
+  </div>
+  <center><div ><input type="submit" class="btn" value="Predict"></div></center>
+</form>
+</div>
+
+</body>
+</html>
